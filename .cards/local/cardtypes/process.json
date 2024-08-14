@@ -1,0 +1,12 @@
+{
+    "name": "process",
+    "workflow": "entityWorkflow",
+    "customFields": [
+        {
+            "name": "description"
+        },
+        {
+            "name": "technology"
+        }
+    ]
+}

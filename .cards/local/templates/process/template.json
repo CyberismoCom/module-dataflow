@@ -1,0 +1,7 @@
+{
+    "buttonLabel": "Button",
+    "namePrompt": "Prompt",
+    "displayName": "Process",
+    "description": "An activity that the system carries out.",
+    "category": "Data flow model"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "person",
+    "workflow": "entityWorkflow",
+    "customFields": [
+        {
+            "name": "description"
+        }
+    ]
+}

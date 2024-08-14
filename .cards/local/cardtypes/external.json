@@ -1,0 +1,12 @@
+{
+    "name": "external",
+    "workflow": "entityWorkflow",
+    "customFields": [
+        {
+            "name": "description"
+        },
+        {
+            "name": "technology"
+        }
+    ]
+}

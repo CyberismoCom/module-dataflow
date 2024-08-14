@@ -1,0 +1,9 @@
+{
+    "name": "trustBoundary",
+    "workflow": "entityWorkflow",
+    "customFields": [
+        {
+            "name": "description"
+        }
+    ]
+}
