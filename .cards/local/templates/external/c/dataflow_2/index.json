@@ -1,5 +1,7 @@
 {
-    "title": "Untitled",
+    "title": "Untitled external entity",
     "cardtype": "external",
-    "workflowState": ""
+    "workflowState": "",
+    "description": "",
+    "technology": ""
 }

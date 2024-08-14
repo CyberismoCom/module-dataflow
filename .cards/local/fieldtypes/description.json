@@ -1,4 +1,5 @@
 {
     "name": "description",
+    "displayName": "Description",
     "dataType": "longtext"
 }

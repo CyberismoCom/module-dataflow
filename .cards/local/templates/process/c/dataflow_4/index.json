@@ -1,5 +1,7 @@
 {
-    "title": "Untitled",
+    "title": "Untitled process",
     "cardtype": "process",
-    "workflowState": ""
+    "workflowState": "",
+    "description": "",
+    "technology": ""
 }

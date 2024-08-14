@@ -1,5 +1,7 @@
 {
-    "title": "Untitled",
+    "title": "Untitled data store",
     "cardtype": "dataStore",
-    "workflowState": ""
+    "workflowState": "",
+    "description": "",
+    "technology": ""
 }
