@@ -1,5 +1,6 @@
 {
     "name": "description",
     "displayName": "Description",
+    "fieldDescription": "A description of the entity",
     "dataType": "longtext"
 }

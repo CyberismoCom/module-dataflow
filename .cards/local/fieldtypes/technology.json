@@ -1,5 +1,6 @@
 {
     "name": "technology",
     "displayName": "Technology",
-    "dataType": "shorttext"
+    "dataType": "shorttext",
+    "fieldDescription": "Technology or framework"
 }
