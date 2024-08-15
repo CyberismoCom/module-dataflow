@@ -8,5 +8,9 @@
         {
             "name": "technology"
         }
+    ],
+    "alwaysVisibleFields": [
+        "description",
+        "technology"
     ]
 }

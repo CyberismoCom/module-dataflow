@@ -4,6 +4,13 @@
     "customFields": [
         {
             "name": "description"
+        },
+        {
+            "name": "technology"
         }
+    ],
+    "alwaysVisibleFields": [
+        "description",
+        "technology"
     ]
 }
