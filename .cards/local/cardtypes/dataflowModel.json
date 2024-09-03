@@ -1,0 +1,12 @@
+{
+    "name": "dataflowModel",
+    "workflow": "entityWorkflow",
+    "customFields": [
+        {
+            "name": "description"
+        }
+    ],
+    "alwaysVisibleFields": [
+        "description"
+    ]
+}

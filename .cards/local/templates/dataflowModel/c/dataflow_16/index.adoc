@@ -1,11 +1,9 @@
 [TIP]
 ====
-You can add child elements under this data store by clicking one of the buttons below.
-
-To add a data flow to or from this data store, click the link symbol in the top level tool bar to create a link.
+You can add top level elements in the data flow model by clicking one of the buttons below.
 ====
 
-== Composite components
+== Top level elements
 
 === Trust boundary
 
@@ -15,7 +13,7 @@ A trust boundary is a boundary between different trust zone levels.
 
 === External entity
 
-An external entity is a source, from which information flows into the system, or a recipients of information leaving the system
+An external entity is a source from which information flows into the system, or a recipients of information leaving the system
 
 {{{createCards '{"buttonLabel": "Create an external entity", "template": "external"}'}}}
 
