@@ -1,5 +1,5 @@
 {
-    "name": "description",
+    "name": "dataflow/fieldtypes/description",
     "displayName": "Description",
     "fieldDescription": "A description of the entity",
     "dataType": "longtext"

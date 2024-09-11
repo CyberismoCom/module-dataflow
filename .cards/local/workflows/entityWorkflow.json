@@ -1,5 +1,5 @@
 {
-    "name": "entityWorkflow",
+    "name": "dataflow/workflows/entityWorkflow",
     "states": [
         {
             "name": "Draft",
