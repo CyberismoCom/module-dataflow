@@ -1,8 +1,20 @@
 {
-    "name": "dataflow",
+    "name": "dataflow/linktypes/dataflow",
     "outboundDisplayName": "data flow to",
     "inboundDisplayName": "data flow from",
-    "sourceCardTypes": ["external", "person", "process", "dataStore", "trustBoundary"],
-    "destinationCardTypes": ["external", "person", "process", "dataStore", "trustBoundary"],
+    "sourceCardTypes": [
+        "dataflow/cardtypes/external",
+        "dataflow/cardtypes/person",
+        "dataflow/cardtypes/process",
+        "dataflow/cardtypes/dataStore",
+        "dataflow/cardtypes/trustBoundary"
+    ],
+    "destinationCardTypes": [
+        "dataflow/cardtypes/external",
+        "dataflow/cardtypes/person",
+        "dataflow/cardtypes/process",
+        "dataflow/cardtypes/dataStore",
+        "dataflow/cardtypes/trustBoundary"
+    ],
     "enableLinkDescription": true
 }

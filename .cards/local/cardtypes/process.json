@@ -1,16 +1,16 @@
 {
-    "name": "process",
-    "workflow": "entityWorkflow",
+    "name": "dataflow/cardtypes/process",
+    "workflow": "dataflow/workflows/entityWorkflow",
     "customFields": [
         {
-            "name": "description"
+            "name": "dataflow/fieldtypes/description"
         },
         {
-            "name": "technology"
+            "name": "dataflow/fieldtypes/technology"
         }
     ],
     "alwaysVisibleFields": [
-        "description",
-        "technology"
+        "dataflow/fieldtypes/description",
+        "dataflow/fieldtypes/technology"
     ]
 }
