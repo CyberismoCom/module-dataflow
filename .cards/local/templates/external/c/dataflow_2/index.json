@@ -1,7 +1,9 @@
 {
     "title": "Untitled external entity",
-    "cardtype": "external",
+    "cardtype": "dataflow/cardtypes/external",
     "workflowState": "",
-    "description": "",
-    "technology": ""
+    "dataflow/fieldtypes/description": "",
+    "dataflow/fieldtypes/technology": "",
+    "rank": "0|a",
+    "lastUpdated": "2024-09-13T13:21:34.305Z"
 }

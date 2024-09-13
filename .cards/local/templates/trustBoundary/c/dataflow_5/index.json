@@ -1,7 +1,9 @@
 {
     "title": "Untitled trust boundary",
-    "cardtype": "trustBoundary",
+    "cardtype": "dataflow/cardtypes/trustBoundary",
     "workflowState": "",
-    "description": "",
-    "technology": ""
+    "dataflow/fieldtypes/description": "",
+    "dataflow/fieldtypes/technology": "",
+    "rank": "0|a",
+    "lastUpdated": "2024-09-13T13:21:34.309Z"
 }

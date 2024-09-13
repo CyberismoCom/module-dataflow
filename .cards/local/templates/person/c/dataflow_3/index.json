@@ -1,6 +1,8 @@
 {
     "title": "Untitled person",
-    "cardtype": "person",
+    "cardtype": "dataflow/cardtypes/person",
     "workflowState": "",
-    "description": ""
+    "dataflow/fieldtypes/description": "",
+    "rank": "0|a",
+    "lastUpdated": "2024-09-13T13:21:34.307Z"
 }

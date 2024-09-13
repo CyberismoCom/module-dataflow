@@ -1,5 +1,8 @@
 {
     "title": "Untitled dataflow model",
-    "cardtype": "dataflowModel",
-    "workflowState": ""
+    "cardtype": "dataflow/cardtypes/dataflowModel",
+    "workflowState": "",
+    "dataflow/fieldtypes/description": "",
+    "rank": "0|a",
+    "lastUpdated": "2024-09-13T13:21:34.304Z"
 }
