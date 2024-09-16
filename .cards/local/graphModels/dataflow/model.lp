@@ -36,17 +36,9 @@ contains(X, Z) :- consistsOf(X, Y), contains(Y, Z), entity(X), entity(Y), entity
 entityLevel(X, 1) :- entity(X), not consistsOf(_, X).
 entityLevel(X, N+1) :- entity(X), consistsOf(Y, X), entityLevel(Y, N).
 
-% a dataflow can be either anonymous (= declared without an identification), or identified
-% anonymous dataflows are converted to identified dataflows with the identifier "anonymousDataflow"
-dataflow((A, B, anonymousDataflow)) :- dataflow((A, B)).
-dataflow((A, B, anonymousDataflow), Title) :- dataflow((A, B), Title).
-dataflow((A, B, anonymousDataflow), Title, Technology) :- dataflow((A, B), Title, Technology).
-title((A, B, anonymousDataflow), Title) :- title((A, B), Title).
-technology((A, B, anonymousDataflow), Technology) :- technology((A, B), Technology).
+% dataflows
 
-dataflow((A, B, N), Title) :- dataflow((A, B, N), Title, _).
-title((A, B, N), Title) :- dataflow((A, B, N), Title).
-technology((A, B, N), Technology) :- dataflow((A, B, N), _, Technology).
+dataflow(A, B, Title) :- link(A, B, "dataflow/linktypes/dataflow", Title).
 
 
 %
@@ -133,10 +125,10 @@ node(X, toplevelGraph) :- entity(X), visible(X), consistsOf(Y, X), not graph(X, 
 % of a directly visible entity Z, which is either X, Y or an ancestor of X or Y.
 % Here X or Y must not be an ancestor of the other.
 % By an external dataflow, we mean a dataflow whose other endpoint is outside Z
-visible(dataflow(X, Y, N)) :- dataflow((X, Y, N), _), directlyVisible(X), entity(X), entity(Y), not contains(X, Y), not contains(Y, X), not hide(Y).
-visible(dataflow(X, Y, N)) :- dataflow((X, Y, N), _), directlyVisible(Y), entity(X), entity(Y), not contains(Y, X), not contains(X, Y), not hide(X).
-visible(dataflow(X, Y, N)) :- dataflow((X, Y, N), _), directlyVisible(Z), entity(Z), contains(Z, X), entity(X), entity(Y), not contains(Z, Y), not contains(X, Y), not contains(Y, X), not hide(Y).
-visible(dataflow(X, Y, N)) :- dataflow((X, Y, N), _), directlyVisible(Z), entity(Z), contains(Z, Y), entity(X), entity(Y), not contains(Z, X), not contains(X, Y), not contains(Y, X), not hide(X).
+visible(dataflow(X, Y, N)) :- dataflow(X, Y, N), directlyVisible(X), entity(X), entity(Y), not contains(X, Y), not contains(Y, X), not hide(Y).
+visible(dataflow(X, Y, N)) :- dataflow(X, Y, N), directlyVisible(Y), entity(X), entity(Y), not contains(Y, X), not contains(X, Y), not hide(X).
+visible(dataflow(X, Y, N)) :- dataflow(X, Y, N), directlyVisible(Z), entity(Z), contains(Z, X), entity(X), entity(Y), not contains(Z, Y), not contains(X, Y), not contains(Y, X), not hide(Y).
+visible(dataflow(X, Y, N)) :- dataflow(X, Y, N), directlyVisible(Z), entity(Z), contains(Z, Y), entity(X), entity(Y), not contains(Z, X), not contains(X, Y), not contains(Y, X), not hide(X).
 
 % representative(X, Y) means that entity X will represent entity Y when drawing dataflows
 % the existence of a representative doesn't imply anything about visibility of dataflows
@@ -240,9 +232,8 @@ def main(prg):
 attr(edge, (XR, YR, N), ltail, @cluster(XR)) :- edge((XR, YR, N), _), graph(XR, _).
 attr(edge, (XR, YR, N), lhead, @cluster(YR)) :- edge((XR, YR, N), _), graph(YR, _).
 
-% edge "inherits" title and technology from the original dataflow
-title((XR, YR, N), Title) :- title((X, Y, N), Title), edge_((XR, YR, N), _, X, Y).
-technology((XR, YR, N), Technology) :- technology((X, Y, N), Technology), edge_((XR, YR, N), _, X, Y).
+% edge "inherits" title from the original dataflow
+title((XR, YR, Title), Title) :- dataflow(X, Y, Title), edge_((XR, YR, Title), _, X, Y).
 
 % margins
 attr(graph, toplevelGraph, pad, "0.2").
@@ -289,10 +280,8 @@ attr(graph, X, (label, kind), "Trust Boundary") :- trustBoundary(X), graph(X, _)
 attr(graph, X, (label, kind), "Datastore") :- datastore(X), graph(X, _).
 
 % edge labels and technology descriptions
-attr(edge, (X, Y, N), label, "<<font point-size='24'>{{label}}</font> <br/> <font point-size='19'>[{{technology}}]</font>>") :- technology((X, Y, N), _), edge((X, Y, N), _).
-attr(edge, (X, Y, N), label, "<<font point-size='24'>{{label}}</font>>") :- not technology((X, Y, N), _), edge((X, Y, N), _).
-attr(edge, (X, Y, N), (label, label), Title) :- title((X, Y, N), Title), edge((X, Y, N), _).
-attr(edge, (X, Y, N), (label, technology), Technology) :- technology((X, Y, N), Technology), edge((X, Y, N), _).
+attr(edge, (X, Y, Title), label, "<<font point-size='24'>{{label}}</font>>") :- edge((X, Y, Title), _).
+attr(edge, (X, Y, Title), (label, label), Title) :- dataflow(X, Y, Title), edge((X, Y, Title), _).
 
 % shapes of graphs
 attr(graph, X, shape, rectangle) :- process(X), graph(X, _).
