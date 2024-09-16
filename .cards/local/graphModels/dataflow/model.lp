@@ -3,23 +3,23 @@
 %
 
 % process
-process(X) :- field(X, "cardType", "dataflow/cardTypes/process").
+process(X) :- field(X, "cardtype", "dataflow/cardtypes/process").
 entity(X) :- process(X).
 
 % external
-external(X) :- field(X, "cardType", "dataflow/cardTypes/external").
+external(X) :- field(X, "cardtype", "dataflow/cardtypes/external").
 entity(X) :- external(X).
 
 % trust boundary
-trustBoundary(X) :- field(X, "cardType", "dataflow/cardTypes/trustBoundary").
+trustBoundary(X) :- field(X, "cardtype", "dataflow/cardtypes/trustBoundary").
 entity(X) :- trustBoundary(X).
 
 % person
-person(X) :- field(X, "cardType", "dataflow/cardTypes/person").
+person(X) :- field(X, "cardtype", "dataflow/cardtypes/person").
 external(X) :- person(X).
 
 % datastore
-datastore(X) :- field(X, "cardType", "dataflow/cardTypes/dataStore").
+datastore(X) :- field(X, "cardtype", "dataflow/cardtypes/dataStore").
 entity(X) :- datastore(X).
 
 % attributes of entities

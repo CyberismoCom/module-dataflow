@@ -23,4 +23,6 @@ fi
 
 scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
 
+echo "clingo --warn none --outf=0 -V0 --out-atomf=%s. $scriptDir/.calc/main.lp $scriptDir/.cards/local/graphModels/$model/model.lp $scriptDir/.cards/local/graphViews/$view/view.lp.hbs | head -n1  | clingraph --out=render --format=png --type=digraph"
+
 clingo --warn none --outf=0 -V0 --out-atomf=%s. $scriptDir/.calc/main.lp $scriptDir/.cards/local/graphModels/$model/model.lp $scriptDir/.cards/local/graphViews/$view/view.lp.hbs | head -n1  | clingraph --out=render --format=png --type=digraph
