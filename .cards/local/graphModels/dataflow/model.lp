@@ -279,7 +279,7 @@ attr(graph, X, (label, kind), "Process") :- process(X), graph(X, _).
 attr(graph, X, (label, kind), "Trust Boundary") :- trustBoundary(X), graph(X, _).
 attr(graph, X, (label, kind), "Datastore") :- datastore(X), graph(X, _).
 
-% edge labels and technology descriptions
+% edge labels. Edges cannot have technology descriptions
 attr(edge, (X, Y, Title), label, "<<font point-size='24'>{{label}}</font>>") :- edge((X, Y, Title), _).
 attr(edge, (X, Y, Title), (label, label), Title) :- dataflow(X, Y, Title), edge((X, Y, Title), _).
 
