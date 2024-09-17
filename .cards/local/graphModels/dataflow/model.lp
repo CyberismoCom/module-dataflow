@@ -254,7 +254,7 @@ attr(node, X, label, "<<font point-size='32'> <b> {{label}} </b> </font> <br/> <
 attr(node, X, label, "<<font point-size='32'> <b> {{label}} </b> </font> <br/> <font point-size='19'>[{{kind}}: {{technology}}]</font> <br/><font point-size='22'>{{description}}</font>>") :- description(X, _), technology(X, _), entity(X), node(X, G), not invisible(X).
 attr(node, X, label, "<<font point-size='32'> <b> {{label}} </b> </font> <br/> <font point-size='19'>[{{kind}}]</font>>") :- not description(X, _), not technology(X, _), entity(X), node(X, G), not invisible(X).
 attr(node, X, label, "<<font point-size='32'> <b> {{label}} </b> </font> <br/> <font point-size='19'>[{{kind}}: {{technology}}]</font>>") :- not description(X, _), technology(X, _), entity(X), node(X, G), not invisible(X).
-attr(node, X, (label, label), Label) :- label(X, Label), entity(X), node(X, G), not invisible(X).
+attr(node, X, (label, label), Title) :- title(X, Title), entity(X), node(X, G), not invisible(X).
 attr(node, X, (label, description), Description) :- description(X, Description), entity(X), node(X, G), not invisible(X).
 attr(node, X, (label, technology), Technology) :- entity(X), technology(X, Technology), node(X, _), not invisible(X).
 attr(node, X, (label, kind), "Person") :- person(X),  node(X, _), not invisible(X).
