@@ -1,3 +1,11 @@
+== Context diagram
+
+{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/context"'}}}
+
+== Detailed diagram
+
+{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/all"'}}}
+
 [TIP]
 ====
 You can add top level elements in the data flow model by clicking one of the buttons below.

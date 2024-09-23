@@ -1,3 +1,5 @@
+{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/entity"'}}}
+
 [TIP]
 ====
 You can add child elements under this trust boundary by clicking one of the buttons below.
