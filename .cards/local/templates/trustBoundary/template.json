@@ -1,6 +1,4 @@
 {
-    "buttonLabel": "Button",
-    "namePrompt": "Prompt",
     "displayName": "Trust boundary",
     "description": "A boundary between different trust zone levels",
     "category": "Data flow model"
