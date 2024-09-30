@@ -1,9 +1,9 @@
 {
     "title": "Untitled process",
-    "cardtype": "dataflow/cardtypes/process",
+    "cardType": "dataflow/cardTypes/process",
     "workflowState": "",
-    "dataflow/fieldtypes/description": "",
-    "dataflow/fieldtypes/technology": "",
+    "dataflow/fieldTypes/description": "",
+    "dataflow/fieldTypes/technology": "",
     "rank": "0|a",
     "lastUpdated": "2024-09-13T13:21:34.308Z"
 }

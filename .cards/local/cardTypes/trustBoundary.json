@@ -1,0 +1,16 @@
+{
+    "name": "dataflow/cardTypes/trustBoundary",
+    "workflow": "dataflow/workflows/entity",
+    "customFields": [
+        {
+            "name": "dataflow/fieldTypes/description"
+        },
+        {
+            "name": "dataflow/fieldTypes/technology"
+        }
+    ],
+    "alwaysVisibleFields": [
+        "dataflow/fieldTypes/description",
+        "dataflow/fieldTypes/technology"
+    ]
+}

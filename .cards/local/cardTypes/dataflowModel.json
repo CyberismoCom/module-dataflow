@@ -1,0 +1,12 @@
+{
+    "name": "dataflow/cardTypes/dataflowModel",
+    "workflow": "dataflow/workflows/entity",
+    "customFields": [
+        {
+            "name": "dataflow/fieldTypes/description"
+        }
+    ],
+    "alwaysVisibleFields": [
+        "dataflow/fieldTypes/description"
+    ]
+}
