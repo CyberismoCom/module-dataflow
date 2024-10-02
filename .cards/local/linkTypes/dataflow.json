@@ -1,0 +1,20 @@
+{
+    "name": "dataflow/linkTypes/dataflow",
+    "outboundDisplayName": "data flow to",
+    "inboundDisplayName": "data flow from",
+    "sourceCardTypes": [
+        "dataflow/cardTypes/external",
+        "dataflow/cardTypes/person",
+        "dataflow/cardTypes/process",
+        "dataflow/cardTypes/dataStore",
+        "dataflow/cardTypes/trustBoundary"
+    ],
+    "destinationCardTypes": [
+        "dataflow/cardTypes/external",
+        "dataflow/cardTypes/person",
+        "dataflow/cardTypes/process",
+        "dataflow/cardTypes/dataStore",
+        "dataflow/cardTypes/trustBoundary"
+    ],
+    "enableLinkDescription": true
+}
