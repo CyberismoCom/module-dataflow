@@ -1,1 +1,4 @@
-{"id":"workflow-schema","version":1}
+{
+    "id": "workflowSchema",
+    "version": 1
+}

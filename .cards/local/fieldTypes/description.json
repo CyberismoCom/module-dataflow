@@ -2,5 +2,5 @@
     "name": "dataflow/fieldTypes/description",
     "displayName": "Description",
     "fieldDescription": "A description of the entity",
-    "dataType": "longtext"
+    "dataType": "longText"
 }
