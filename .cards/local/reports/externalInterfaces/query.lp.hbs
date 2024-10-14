@@ -1,0 +1,95 @@
+#script (python)
+from clingo.symbol import String
+
+class Context:
+    def concatenate(self, a, b, c):
+        a_ = str(a).strip('"')
+        b_ = str(b).strip('"')
+        c_ = str(c).strip('"')
+        return String(a_ + b_ + c_)
+
+def main(prg):
+    prg.ground([("base", [])], context=Context())
+    prg.solve()
+#end.
+
+selectAll.
+
+% outbound external dataflow
+result(@concatenate(A, B, Title)) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/direction", "Outbound") :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/title", Title) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/externalTitle", External) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}),
+     field(B, "title", External).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/externalCardKey", B) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/internalTitle", Internal) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}),
+     field(A, "title", Internal).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/internalCardKey", A) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     ancestor(A, {{cardKey}}),
+     not ancestor(B, {{cardKey}}).
+
+% inbound external dataflow
+result(@concatenate(A, B, Title)) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/direction", "Inbound") :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/title", Title) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/externalTitle", External) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}),
+     field(A, "title", External).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/externalCardKey", A) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}),
+     field(B, "title", External).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/internalTitle", Internal) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}),
+     field(B, "title", Internal).
+
+field(@concatenate(A, B, Title), "dataflow/fieldTypes/internalCardKey", B) :-
+     link(A, B, "dataflow/linkTypes/dataflow", Title),
+     not ancestor(A, {{cardKey}}),
+     ancestor(B, {{cardKey}}).
+
+orderBy("dataflow/fieldTypes/direction", "ASC", "dataflow/fieldTypes/internal", "ASC").

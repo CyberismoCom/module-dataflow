@@ -1,0 +1,13 @@
+
+[cols="2,2,2,4", frame=none, grid=all]
+|===
+|Direction | Internal element | External element | Dataflow
+
+{{#each results}}
+|{{this.[dataflow/fieldTypes/direction]}}
+|xref:{{this.[dataflow/fieldTypes/internalCardKey]}}.adoc[{{this.[dataflow/fieldTypes/internalTitle]}}]
+|xref:{{this.[dataflow/fieldTypes/externalCardKey]}}.adoc[{{this.[dataflow/fieldTypes/externalTitle]}}]
+|{{this.[dataflow/fieldTypes/title]}}
+{{/each}}
+
+|===
