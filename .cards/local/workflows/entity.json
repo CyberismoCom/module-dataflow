@@ -24,6 +24,13 @@
                 "Draft"
             ],
             "toState": "Ready"
+        },
+        {
+            "name": "Reopen",
+            "fromState": [
+                "Ready"
+            ],
+            "toState": "Draft"
         }
     ]
 }
