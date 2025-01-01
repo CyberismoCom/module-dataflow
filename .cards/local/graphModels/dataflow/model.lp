@@ -3,23 +3,23 @@
 %
 
 % process
-process(X) :- field(X, "cardtype", "dataflow/cardtypes/process").
+process(X) :- field(X, "cardType", "dataflow/cardTypes/process").
 entity(X) :- process(X).
 
 % external
-external(X) :- field(X, "cardtype", "dataflow/cardtypes/external").
+external(X) :- field(X, "cardType", "dataflow/cardTypes/external").
 entity(X) :- external(X).
 
 % trust boundary
-trustBoundary(X) :- field(X, "cardtype", "dataflow/cardtypes/trustBoundary").
+trustBoundary(X) :- field(X, "cardType", "dataflow/cardTypes/trustBoundary").
 entity(X) :- trustBoundary(X).
 
 % person
-person(X) :- field(X, "cardtype", "dataflow/cardtypes/person").
+person(X) :- field(X, "cardType", "dataflow/cardTypes/person").
 external(X) :- person(X).
 
 % datastore
-datastore(X) :- field(X, "cardtype", "dataflow/cardtypes/dataStore").
+datastore(X) :- field(X, "cardType", "dataflow/cardTypes/dataStore").
 entity(X) :- datastore(X).
 
 % attributes of entities
@@ -38,7 +38,7 @@ entityLevel(X, N+1) :- entity(X), consistsOf(Y, X), entityLevel(Y, N).
 
 % dataflows
 
-dataflow(A, B, Title) :- link(A, B, "dataflow/linktypes/dataflow", Title).
+dataflow(A, B, Title) :- link(A, B, "dataflow/linkTypes/dataflow", Title).
 
 
 %
@@ -281,7 +281,7 @@ attr(graph, X, (label, kind), "Datastore") :- datastore(X), graph(X, _).
 
 % edge labels. Edges cannot have technology descriptions
 attr(edge, (X, Y, Title), label, "<<font point-size='24'>{{label}}</font>>") :- edge((X, Y, Title), _).
-attr(edge, (X, Y, Title), (label, label), Title) :- dataflow(X, Y, Title), edge((X, Y, Title), _).
+attr(edge, (X, Y, Title), (label, label), Title) :- edge((X, Y, Title), _).
 
 % shapes of graphs
 attr(graph, X, shape, rectangle) :- process(X), graph(X, _).
