@@ -1,1 +1,4 @@
-{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/entity"'}}}
+{{{graph '{
+    "model": "dataflow/graphModels/dataflow",
+    "view": "dataflow/graphViews/entity"
+}'}}}

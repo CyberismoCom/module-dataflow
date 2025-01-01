@@ -1,10 +1,16 @@
 == Context diagram
 
-{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/context"'}}}
+{{{graph '{
+    "model": "dataflow/graphModels/dataflow",
+    "view": "dataflow/graphViews/context"
+}'}}}
 
 == Detailed diagram
 
-{{{graph '{"model" : "dataflow/graphModels/dataflow", "view" : "dataflow/graphViews/all"'}}}
+{{{graph '{
+    "model": "dataflow/graphModels/dataflow",
+    "view": "dataflow/graphViews/all"
+}'}}}
 
 [TIP]
 ====
@@ -17,28 +23,43 @@ You can add top level elements in the data flow model by clicking one of the but
 
 A trust boundary is a boundary between different trust zone levels.
 
-{{{createCards '{"buttonLabel": "Create a trust boundary", "template": "dataflow/templates/trustBoundary"}'}}}
+{{{createCards '{
+    "buttonLabel": "Create a trust boundary",
+    "template": "dataflow/templates/trustBoundary"
+}'}}}
 
 === External entity
 
 An external entity is a source from which information flows into the system, or a recipients of information leaving the system
 
-{{{createCards '{"buttonLabel": "Create an external entity", "template": "dataflow/templates/external"}'}}}
+{{{createCards '{
+    "buttonLabel": "Create an external entity",
+    "template": "dataflow/templates/external"
+}'}}}
 
 === Person
 
 A person is a user, an administrator or another human stakeholder. A special case of an external entity.
 
-{{{createCards '{"buttonLabel": "Create a person", "template": "dataflow/templates/person"}'}}}
+{{{createCards '{
+    "buttonLabel": "Create a person",
+    "template": "dataflow/templates/person"
+}'}}}
 
 === Process
 
 A process represents an activity that the system carries out.
 
-{{{createCards '{"buttonLabel": "Create a process", "template": "dataflow/templates/process"}'}}}
+{{{createCards '{
+    "buttonLabel": "Create a process",
+    "template": "dataflow/templates/process"
+}'}}}
 
 === Data store
 
 A data store stores information. For example, a database or a file.
 
-{{{createCards '{"buttonLabel": "Create a data store", "template": "dataflow/templates/dataStore"}'}}}
+{{{createCards '{
+    "buttonLabel": "Create a data store",
+    "template": "dataflow/templates/dataStore"
+}'}}}
