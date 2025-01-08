@@ -216,21 +216,8 @@ edge((XR, YR, N), G) :- edge_((XR, YR, N), G, _, _).
 attr(graph, X, compound, true) :- graph(X).
 attr(graph, X, compound, true) :- graph(X, _).
 
-#script (python)
-from clingo.symbol import String
-
-class Context:
-    def cluster(self, s):
-        val = str(s).strip('"')
-        return String("cluster_" + val)
-
-def main(prg):
-    prg.ground([("base", [])], context=Context())
-    prg.solve()
-#end.
-
-attr(edge, (XR, YR, N), ltail, @cluster(XR)) :- edge((XR, YR, N), _), graph(XR, _).
-attr(edge, (XR, YR, N), lhead, @cluster(YR)) :- edge((XR, YR, N), _), graph(YR, _).
+attr(edge, (XR, YR, N), ltail, @concatenate("cluster_", XR)) :- edge((XR, YR, N), _), graph(XR, _).
+attr(edge, (XR, YR, N), lhead, @concatenate("cluster_", YR)) :- edge((XR, YR, N), _), graph(YR, _).
 
 % edge "inherits" title from the original dataflow
 title((XR, YR, Title), Title) :- dataflow(X, Y, Title), edge_((XR, YR, Title), _, X, Y).
