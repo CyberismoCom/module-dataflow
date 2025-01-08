@@ -267,8 +267,10 @@ attr(graph, X, (label, kind), "Trust Boundary") :- trustBoundary(X), graph(X, _)
 attr(graph, X, (label, kind), "Datastore") :- datastore(X), graph(X, _).
 
 % edge labels. Edges cannot have technology descriptions
+% for compatibility reasons, we have to use at least a whitespace the label
 attr(edge, (X, Y, Title), label, "<<font point-size='24'>{{label}}</font>>") :- edge((X, Y, Title), _).
-attr(edge, (X, Y, Title), (label, label), Title) :- edge((X, Y, Title), _).
+attr(edge, (X, Y, Title), (label, label), Title) :- edge((X, Y, Title), _), Title != "".
+attr(edge, (X, Y, Title), (label, label), " ") :- edge((X, Y, Title), _), Title = "".
 
 % shapes of graphs
 attr(graph, X, shape, rectangle) :- process(X), graph(X, _).
