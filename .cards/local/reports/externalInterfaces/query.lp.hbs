@@ -1,18 +1,3 @@
-#script (python)
-from clingo.symbol import String
-
-class Context:
-    def concatenate(self, a, b, c):
-        a_ = str(a).strip('"')
-        b_ = str(b).strip('"')
-        c_ = str(c).strip('"')
-        return String(a_ + b_ + c_)
-
-def main(prg):
-    prg.ground([("base", [])], context=Context())
-    prg.solve()
-#end.
-
 selectAll.
 
 % outbound external dataflow
