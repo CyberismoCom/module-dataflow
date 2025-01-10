@@ -1,4 +1,5 @@
 {{#if layout}}
 attr(graph, toplevelGraph, rankdir, "{{layout}}").
 {{/if}}
-viewAll.
+
+view(TopLevelEntity) :- parent(TopLevelEntity, {{cardKey}}).

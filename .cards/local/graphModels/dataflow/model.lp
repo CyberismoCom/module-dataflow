@@ -40,7 +40,6 @@ entityLevel(X, N+1) :- entity(X), consistsOf(Y, X), entityLevel(Y, N).
 
 dataflow(A, B, Title) :- link(A, B, "dataflow/linkTypes/dataflow", Title).
 
-
 %
 % Conversion from the architecture model to clingraph format
 %
