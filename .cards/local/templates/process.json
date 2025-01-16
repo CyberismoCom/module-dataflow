@@ -1,5 +1,6 @@
 {
     "displayName": "Process",
     "description": "An activity that the system carries out.",
-    "category": "Data flow model"
+    "category": "Data flow model",
+    "name": "dataflow/templates/process"
 }
