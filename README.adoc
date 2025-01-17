@@ -1,0 +1,25 @@
+= Cyberismo ISMS essentials module
+
+== Copyright
+
+Copyright © Cyberismo Ltd and contributors 2024
+
+== License and trademark policy
+
+This is free content: you can redistribute it and/or modify it under the terms of the Creative Commons Attribution-ShareAlike 4.0 International Public License.
+
+The use of Cyberismo trademark is governed by the Cyberismo open source trademark policy. See separate file TRADEMARK.adoc.
+
+This content is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the Creative Commons Attribution-ShareAlike 4.0 International Public License in the separate LICENSE file for more details.
+
+== Contributing
+
+See separate file CONTRIBUTING.
+
+== About the Cyberismo dataflow module
+
+The Cyberismo dataflow module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows.
+
+See https://docs.cyberismo.com/cards/docs_8mywsysm.html[Dataflow module tutorial in Cyberismo documentation] for more information.
