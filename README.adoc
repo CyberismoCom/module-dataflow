@@ -1,4 +1,4 @@
-= Cyberismo ISMS essentials module
+= Cyberismo dataflow module
 
 == Copyright
 
