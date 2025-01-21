@@ -1,8 +1,8 @@
-{{{graph '{
-    "model": "dataflow/graphModels/dataflow",
-    "view": "dataflow/graphViews/entity",
-    "layout": "LR"
-}'}}}
+{{#graph}}
+  "model": "dataflow/graphModels/dataflow",
+  "view": "dataflow/graphViews/entity",
+  "layout": "LR"
+{{/graph}}
 
 [TIP]
 ====
@@ -17,43 +17,43 @@ To add a data flow to or from this trust boundary, click the link symbol in the 
 
 A trust boundary is a boundary between different trust zone levels.
 
-{{{createCards '{
-    "buttonLabel": "Create a trust boundary",
-    "template": "dataflow/templates/trustBoundary"
-}'}}}
+{{#createCards}}
+  "buttonLabel": "Create a trust boundary",
+  "template": "dataflow/templates/trustBoundary"
+{{/createCards}}
 
 === External entity
 
 An external entity is a source, from which information flows into the system, or a recipients of information leaving the system
 
-{{{createCards '{
-    "buttonLabel": "Create an external entity",
-    "template": "dataflow/templates/external"
-}'}}}
+{{#createCards}}
+  "buttonLabel": "Create an external entity",
+  "template": "dataflow/templates/external"
+{{/createCards}}
 
 === Person
 
 A person is a user, an administrator or another human stakeholder. A special case of an external entity.
 
-{{{createCards '{
-    "buttonLabel": "Create a person",
-    "template": "dataflow/templates/person"
-}'}}}
+{{#createCards}}
+  "buttonLabel": "Create a person",
+  "template": "dataflow/templates/person"
+{{/createCards}}
 
 === Process
 
 A process represents an activity that the system carries out.
 
-{{{createCards '{
-    "buttonLabel": "Create a process",
-    "template": "dataflow/templates/process"
-}'}}}
+{{#createCards}}
+  "buttonLabel": "Create a process",
+  "template": "dataflow/templates/process"
+{{/createCards}}
 
 === Data store
 
 A data store stores information. For example, a database or a file.
 
-{{{createCards '{
-    "buttonLabel": "Create a data store",
-    "template": "dataflow/templates/dataStore"
-}'}}}
+{{#createCards}}
+  "buttonLabel": "Create a data store",
+  "template": "dataflow/templates/dataStore"
+{{/createCards}}
