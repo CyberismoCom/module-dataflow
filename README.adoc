@@ -22,4 +22,4 @@ See separate file CONTRIBUTING.
 
 The Cyberismo dataflow module defines card types and link types for creating dataflow models with processes, external entities, data storages, trust boundaries and data flows.
 
-See https://docs.cyberismo.com/cards/docs_8mywsysm.html[Dataflow module tutorial in Cyberismo documentation] for more information.
+You can use this module as an example of the visualisation capabilities. For threat modelling and architecture diagrams, we recommend using the Cyberismo secure development essentials module instead. See https://docs.cyberismo.com/cards/docs_8mywsysm.html[Threat modelling tutorial in Cyberismo documentation] for more information.
