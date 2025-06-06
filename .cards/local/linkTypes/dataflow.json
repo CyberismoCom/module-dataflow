@@ -16,5 +16,6 @@
         "dataflow/cardTypes/dataStore",
         "dataflow/cardTypes/trustBoundary"
     ],
-    "enableLinkDescription": true
+    "enableLinkDescription": true,
+    "displayName": ""
 }
