@@ -2,5 +2,5 @@
     "name": "dataflow/fieldTypes/technology",
     "displayName": "Technology",
     "dataType": "shortText",
-    "fieldDescription": "Technology or framework"
+    "description": "Technology or framework"
 }

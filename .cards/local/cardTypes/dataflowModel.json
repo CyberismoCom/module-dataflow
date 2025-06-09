@@ -8,5 +8,6 @@
     ],
     "alwaysVisibleFields": [
         "dataflow/fieldTypes/description"
-    ]
+    ],
+    "displayName": ""
 }
